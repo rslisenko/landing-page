@@ -1,0 +1,181 @@
+@import "layout.scss";
+@import "normalize.scss";
+@import "slick.scss";
+@import "slick-theme.scss";
+
+$header-height: 50px;
+$header-line-height: $header-height;
+body{
+	font: 400 16px/1.3 Arial, sans-serif;
+	padding: 20px 0;
+	background: #220C3E;
+	color: #FFFFFF;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 0px;
+	padding-right: 0px;
+	max-width: 1200px;
+	background: linear-gradient(to right top, #810FD1 60%, #1D31B4);
+}
+
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 10px 0;
+	text-transform: uppercase;
+}
+a {
+	color: #FFF;
+}
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-header {
+	padding: 20px 5px;
+	.ba-logo {
+		float: left;
+		height: $header-height;
+		padding-top: 10px;
+	}
+	.ba-main-nav {
+		height: $header-height;
+		line-height: $header-line-height;
+		float: right;
+		ul {
+			margin: 0;
+			list-style-type: none;
+		}
+		&__item {
+			float: left;
+			padding-left: 20px;
+			a {
+				opacity: 0.6;
+				display: block;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.ba-demo {
+		margin: 0 20px;
+		height: $header-height;
+		line-height: $header-line-height;
+		float: right;
+		a {
+			font-size: 13px;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 5px 20px;
+			background: #FF5A0F;
+			border-radius: 20px;
+			&:hover {
+				background: rgba(255, 90, 15, 0.7);
+			}
+		}
+	}
+}
+.ba-body {
+	margin-top: 50px;
+
+	&__title {
+		margin: 20px 0;
+	}
+	.ba-slick {
+		&--active {
+			background-color: #6319C8;
+		}
+	}
+	.ba-slider {
+		margin-top: 50px;
+		position: relative;
+		&__btn {
+			position: absolute;
+			top: 50%;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-size: cover;
+			transform: translateY(-50%);
+			&:hover {
+				background-color: #e6d200;
+			}
+		}
+		&__prev {
+			left: 20px;
+			background: #FFEE36 url(../img/arrow-left.svg) no-repeat center;
+		}
+		&__next {
+			right: 20px;
+			background: #FFEE36 url(../img/arrow-right.svg) no-repeat center;
+		}
+	}
+	.ba-slider-thumb {
+		&__item {
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			outline: none;
+			letter-spacing: 0.2em;
+			background: #FF5A0F;
+			cursor: pointer;
+			padding: 20px 0;
+			border-left: 1px solid #cbc;
+			transition: background-color .5s;
+			&.slick-current {
+				background-color: #6319C8;
+			}
+		}
+	}
+}
